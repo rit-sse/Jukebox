@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<title>SSE JukeBox</title>
+		
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		<style type="text/css">
 			#page{
@@ -23,7 +28,8 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="./index.html">SSE JukeBox</a>
+						<a class="navbar-brand visible-xs visible-sm" href="#">Never Gonna Let You Down <small>Rick Ashley</small></a>
+						<a class="navbar-brand visible-md visible-lg" href="#">SSE JukeBox</a>
 					</div>
 					<div id="navbar" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
@@ -36,13 +42,20 @@
 			</nav>
 			<div id="page" class="row">
 				<aside class="col-sm-4">
-					<div class="well">
-						<h2>Up Next...</h2>
+					<div class="panel">
+						<div class="panel-header">
+							<h2 class="panel-heading">Up Next...</h2>
+						</div>
+						<div class="panel-body">
+							<p>...</p>
+						</div>
 					</div>
 				</aside>
 				<section class="col-sm-8">
-					<div class="well">
-						<h1>Search for something...</h1>
+					<div class="panel">
+						<div class="panel-body">
+							<h1>Search for something...</h1>
+						</div>
 					</div>
 				</section>
 			</div>
