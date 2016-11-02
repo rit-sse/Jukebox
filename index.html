@@ -7,20 +7,38 @@
 
 		<title>SSE JukeBox - Place music in the SSE!</title>
 		
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/paper.min.css">
 		<style type="text/css">
 			#page{
 				margin-top: 70px;
 			}
+
+			.responses a{
+				font-size: 2em;
+			}
+			.responses a:hover{
+				background-color: tan;
+			}
 		</style>
 
-		<script type="type/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="type/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script type="type/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="type/javascript">
+			$(document).ready(function(){
+				$("#q").keypress(function(e){
+					if(e.which == 13){
+						alert("OH DAMN!");
+						return false;
+					}
+					return true;
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class="container-fluid">
 			<nav class="navbar navbar-default navbar-fixed-top">
-				<div class="container-fluid">
+				<div class="container-fluid visible-xs visible-sm">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 							<span class="sr-only">SSE JukeBox</span>
@@ -39,25 +57,33 @@
 						</ul>
 					</div>
 				</div>
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav col-md-12">
+						<li class="col-md-2"><a href="/">SSE JukeBox</a></li>
+                        <li class="col-md-5"><a>Never Gonna Let You Down <small>Rick Ashley</small></a></li>
+							<li class="vertical-divider"></li>
+                        <li class="col-md-5"><a><strong>Up Next: </strong>Ramadamadingdong <small>Someone</small></a></li>
+                    </ul>
+                </div>
 			</nav>
-			<div id="page" class="row">
-				<aside class="col-sm-4">
-					<div class="panel">
-						<div class="panel-header">
-							<h2 class="panel-heading">Up Next...</h2>
+			<div id="page">
+				<div class="row">
+					<aside class="col-sm-4">
+						<h2>Up Next...</h2>
+					</aside>
+					<section class="col-sm-8">
+						<form method="get" id="search">
+							<div class="form-group">
+								<input type="text" class="input-lg form-control" id="q" style="font-size:50pt;height:100%;" name="q" placeholder="Search for a song..." autocomplete="false">
+							</div>
+						</form>
+						<div class="responses list-group">
+							<a href="#" class="list-group-item">Song A</a>
+							<a href="#" class="list-group-item">Song B</a>
+							<a href="#" class="list-group-item">Song C</a>
 						</div>
-						<div class="panel-body">
-							<p>...</p>
-						</div>
-					</div>
-				</aside>
-				<section class="col-sm-8">
-					<div class="panel">
-						<div class="panel-body">
-							<h1>Search for something...</h1>
-						</div>
-					</div>
-				</section>
+					</section>
+				</div>
 			</div>
 		</div>
 	</body>
